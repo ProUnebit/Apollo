@@ -3,10 +3,59 @@
 
 .header {
 // |---PARAMS-LOC---|
+$main-bg: $global-isabelline;
+$letter-color: darken($global-isabelline, 20%);
+$text-color: $global-black;
 
 // |---STYLES---|
+    margin-top: 50px;
+    margin-bottom: 50px;
 
     &__content {
+        height: 750px;
+        background-color: $main-bg;
+        background: url('img/Warstwa 1.jpg') no-repeat;
+        background-size: 100%;
+        filter: grayscale(100%);
+        transition: .45s linear;
+        &:hover {
+            filter: none;
+        }
+    }
+
+    &__letter-ground {
+        color: $letter-color;
+    }
+
+    &__title-box {
+
+    }
+
+    &__title {
+
+    }
+
+    &__desc {
+
+    }
+
+    &__menu-box {
+
+    }
+
+    &__menu-open {
+        cursor: pointer;
+    }
+
+    &__burger-icon {
+
+    }
+
+    &__menu-sections-list {
+        display: none;
+    }
+
+    &__menu-item {
 
     }
 }

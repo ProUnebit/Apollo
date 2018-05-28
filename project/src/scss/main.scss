@@ -7,7 +7,7 @@ body {
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway';
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -28,4 +28,5 @@ a {
     flex-direction: column;
     width: 100%;
     overflow: hidden;
+    background-color: $global-white;
 }
