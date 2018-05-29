@@ -13,6 +13,34 @@
     font-style: italic;
     font-stretch: normal;
 }
+// Font: Metroplex Shadow
+@font-face {
+    font-family:'Metroplex Shadow';
+    src: url('../fonts/Metroplex Shadow.eot');
+	src: url('../fonts/Metroplex Shadow.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Metroplex Shadow.woff2') format('woff2'),
+		url('../fonts/Metroplex Shadow.woff') format('woff'),
+		url('../fonts/Metroplex Shadow.ttf') format('truetype'),
+		url('../fonts/Metroplex Shadow.otf') format('opentype'),
+		url('../fonts/Metroplex Shadow.svg#Metroplex Shadow') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+// Font: Block-O
+@font-face {
+    font-family:'o';
+    src: url('../fonts/o.eot');
+	src: url('../fonts/o.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/o.woff2') format('woff2'),
+		url('../fonts/o.woff') format('woff'),
+		url('../fonts/o.ttf') format('truetype'),
+		url('../fonts/o.otf') format('opentype'),
+		url('../fonts/o.svg#o') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
 // Font: Raleway
 /* raleway-300 - latin */
 @font-face {
