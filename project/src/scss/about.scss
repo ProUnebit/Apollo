@@ -1,0 +1,102 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.about {
+// |---PARAMS-LOC---|
+$main-bg: $global-isabelline;
+$text-color: $global-black;
+$icons-bg: lighten($global-black, 40%);
+$icons-bg-hover: $global-black;
+$icons-color: $global-white;
+
+// |---STYLES---|
+    margin-bottom: 50px;
+
+    &__content {
+        position: relative;
+        height: 750px;
+        background-color: $main-bg;
+        &:hover {
+            .about__img {
+                filter: none;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 9;
+        left: 40px;
+        top: 80px;
+        filter: grayscale(100%);
+        transition: .45s linear;
+    }
+
+    &__letter-ground {
+        position: absolute;
+        z-index: 5;
+        margin-left: 90px;
+    }
+
+    &__text-block {
+        position: absolute;
+        z-index: 9;
+        margin-top: 185px;
+        margin-left: 690px;
+    }
+
+    &__title {
+        font-family: 'Raleway';
+        color: $text-color;
+        font-size: 50px;
+        text-align: left;
+        font-weight: 100;
+        padding-left: 110px;
+        span {
+            font-weight: bold;
+        }
+        &::before {
+            position: absolute;
+            content: '.';
+            color: transparent;
+            z-index: 5;
+            top: 5px;
+            left: 30px;
+            border-left: 1px solid $text-color;
+            transform: rotate(90deg);
+        }
+    }
+
+    &__desc {
+        font-family: 'LM Roman Slanted 10';
+        color: lighten($text-color, 25%);
+        font-size: 18px;
+        line-height: 25px;
+        text-align: left;
+        width: 625px;
+        margin-top: 25px;
+    }
+
+    &__soc-net-list {
+        position: absolute;
+        z-index: 9;
+        bottom: 110px;
+        left: 690px;
+    }
+
+    &__soc-net-item {
+        display: inline-block;
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        font-size: 20px;
+        text-align: center;
+        color: $icons-color;
+        background-color: $icons-bg;
+        margin-right: 20px;
+        transition: .125s linear;
+        &:hover {
+            background-color: $icons-bg-hover;
+        }
+    }
+}
