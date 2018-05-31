@@ -18,4 +18,29 @@ menuCloseBtn.addEventListener('click', () => {
     menuSectionsList.style.display = '';
 });
 
-// Info Block
+// Slider-1
+// obj options
+let sliderOptions_1 = {
+    stock: ['slider-1-photo-1.jpg', 'pexels-photo-234.jpg', 'pexels-photo-345.jpg', 'pexels-photo-108148.jpeg', 'pexels-photo-289796.jpeg', 'pexels-photo-298298.jpeg', 'pexels-photo-307847.jpeg', 'pexels-photo-320617.jpeg', 'pexels-photo-610293.jpeg', 'pexels-photo-850624.jpeg'],
+    counter: 0,
+    delay: 2000,
+    backSlide() {
+
+    },
+    nextSlide() {
+
+    }
+};
+
+// Slider-2
+// obj options
+let sliderOptions_2 = {};
+
+// Messenger
+function blurInput(e) {
+    this.value = (this.value == '') ? this.title : this.value;
+};
+
+function focusInput(e) {
+    this.value = (this.value == this.title) ? '' : this.value;
+};

@@ -1,0 +1,70 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.slider-1 {
+// |---PARAMS-LOC---|
+$main-bg: $global-isabelline;
+$arrow-bg: $global-white;
+$arrow-color: $global-black;
+
+// |---STYLES---|
+    margin-bottom: 50px;
+
+    &__content {
+        position: relative;
+        height: 750px;
+        max-width: 1480px;
+        margin: 0 auto;
+        background-color: $main-bg;
+        &:hover {
+            .slider-1__img {
+                filter: none;
+            }
+        }
+    }
+
+    &__letter-ground {
+        position: absolute;
+        z-index: 9;
+    }
+
+    &__slider-box {
+        position: relative;
+        height: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 5;
+        width: 1480px;
+        height: 750px;
+        text-align: center;
+        filter: grayscale(100%);
+        transition: .65s linear;
+    }
+
+    &__arrow-back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 15;
+        cursor: pointer;
+        color: $arrow-color;
+        width: 75px;
+        height: 75px;
+        background-color: $arrow-bg;
+        transition: .125s linear;
+        margin-left: 40px;
+        &:hover {
+            background-color: darken($arrow-bg, 20%);
+        }
+    }
+
+    &__arrow-next {
+        @extend .slider-1__arrow-back;
+        margin-right: 40px;
+    }
+}
