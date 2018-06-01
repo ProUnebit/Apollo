@@ -46,6 +46,14 @@ $arrow-color: $global-black;
         transition: .65s linear;
     }
 
+    .slider-animation-1 {
+        animation: opacity-go .25s ease-out;
+        @keyframes opacity-go {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    }
+
     &__arrow-back {
         display: flex;
         justify-content: center;
@@ -60,6 +68,9 @@ $arrow-color: $global-black;
         margin-left: 40px;
         &:hover {
             background-color: darken($arrow-bg, 20%);
+        }
+        &:active {
+            background-color: darken($arrow-bg, 30%);
         }
     }
 
