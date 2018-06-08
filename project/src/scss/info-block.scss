@@ -1,0 +1,66 @@
+@import "partials/params-g";
+@import "partials/mixins";
+
+.info-block {
+// |---PARAMS-LOC---|
+$main-bg: $global-isabelline;
+$text-color: $global-black;
+
+// |---STYLES---|
+    margin-bottom: 50px;
+
+    &__content {
+        position: relative;
+        height: 750px;
+        margin: 0 auto;
+        background-color: $main-bg;
+        &:hover {
+            .info-block__img {
+                filter: none;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 9;
+        right: 88px;
+        top: 152px;
+        filter: grayscale(100%);
+        transition: .45s linear;
+    }
+
+    &__letter-ground {
+        position: absolute;
+        z-index: 5;
+        margin-left: 90px;
+    }
+
+    &__text-block {
+        position: absolute;
+        z-index: 9;
+        margin-top: 215px;
+        margin-left: 180px;
+    }
+
+    &__title {
+        font-family: 'Raleway';
+        color: $text-color;
+        font-size: 50px;
+        text-align: left;
+        font-weight: 100;
+        span {
+            font-weight: bold;
+        }
+    }
+
+    &__desc {
+        width: 430px;
+        font-family: 'LM Roman Slanted 10';
+        color: lighten($text-color, 25%);
+        font-size: 18px;
+        line-height: 25px;
+        text-align: left;
+        margin-top: 25px;
+    }
+}

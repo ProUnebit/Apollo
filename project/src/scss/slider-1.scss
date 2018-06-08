@@ -47,7 +47,7 @@ $arrow-color: $global-black;
     }
 
     .slider-animation-1 {
-        animation: opacity-go .25s ease-out;
+        animation: opacity-go .45s ease-out;
         @keyframes opacity-go {
             from {opacity: 0;}
             to {opacity: 1;}

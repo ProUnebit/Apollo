@@ -25,7 +25,7 @@ menuCloseBtn.addEventListener('click', () => {
 let sliderOptions_1 = {
     stock: ['img/slider-1-photo-1.jpg', 'img/pexels-photo-234.jpg', 'img/pexels-photo-345.jpg', 'img/pexels-photo-108148.jpeg', 'img/pexels-photo-289796.jpeg', 'img/pexels-photo-298298.jpeg', 'img/pexels-photo-307847.jpeg', 'img/pexels-photo-320617.jpeg', 'img/pexels-photo-610293.jpeg', 'img/pexels-photo-850624.jpeg'],
     counter: 0,
-    delay: 300,
+    delay: 500,
     initSlide() {
         document.sliderOne.src = this.stock[this.counter];
         document.sliderOne.classList.add('slider-animation-1');
