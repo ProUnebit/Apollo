@@ -4,14 +4,15 @@
 .slider-2 {
 // |---PARAMS-LOC---|
 $main-bg: $global-isabelline;
-$arrow-bg: $global-white;
-$arrow-color: $global-black;
 
 // |---STYLES---|
     margin-bottom: 50px;
 
     &__content {
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 750px;
         margin: 0 auto;
         background-color: $main-bg;
@@ -25,58 +26,31 @@ $arrow-color: $global-black;
     &__letter-ground {
         position: absolute;
         z-index: 5;
+        left: 0;
         margin-left: 90px;
     }
 
     &__slider-box {
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
+        padding: 40px 0;
+        border-bottom: 2px solid rgba(0, 0, 0, .25);
+        border-top: 2px solid rgba(0, 0, 0, .25);
     }
 
     &__roundabout {
-        width: 1330px;
+        width: 1400px;
     }
 
     &__img {
+        padding: 7px 3px;
         filter: grayscale(100%);
         transition: .65s linear;
-    }
-
-    &__img--1 {
-
-    }
-
-    &__img--2 {
-
-    }
-
-    &__img--3 {
-
-    }
-
-    &__arrow-back {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: -5;
-        cursor: pointer;
-        color: $arrow-color;
-        width: 75px;
-        height: 75px;
-        background-color: $arrow-bg;
-        transition: .125s linear;
-        margin-left: 40px;
-        &:hover {
-            background-color: darken($arrow-bg, 20%);
-        }
         &:active {
-            background-color: darken($arrow-bg, 30%);
+            outline: none;
         }
-    }
-
-    &__arrow-next {
-        @extend .slider-2__arrow-back;
-        margin-right: 40px;
+        &:focus {
+            outline: none;
+        }
     }
 }

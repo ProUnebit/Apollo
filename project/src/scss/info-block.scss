@@ -52,6 +52,15 @@ $text-color: $global-black;
         span {
             font-weight: bold;
         }
+        &::after {
+            position: absolute;
+            content: '.';
+            color: transparent;
+            z-index: 5;
+            top: 240px;
+            left: 0;
+            border-left: 1px solid $text-color;
+        }
     }
 
     &__desc {

@@ -55,7 +55,9 @@ $(document).ready(function(){
   $('.slider-2__roundabout').slick({
       slidesToShow: 3,
       focusOnSelect: true,
-      dots: true
+      dots: true,
+      adaptiveHeight: true,
+      speed: 800
   })
 });
 
