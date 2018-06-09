@@ -29,11 +29,12 @@ $arrow-color: $global-black;
     }
 
     &__slider-box {
-
+        display: flex;
+        justify-content: center;
     }
 
     &__roundabout {
-
+        width: 1330px;
     }
 
     &__img {
@@ -54,10 +55,28 @@ $arrow-color: $global-black;
     }
 
     &__arrow-back {
-
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -5;
+        cursor: pointer;
+        color: $arrow-color;
+        width: 75px;
+        height: 75px;
+        background-color: $arrow-bg;
+        transition: .125s linear;
+        margin-left: 40px;
+        &:hover {
+            background-color: darken($arrow-bg, 20%);
+        }
+        &:active {
+            background-color: darken($arrow-bg, 30%);
+        }
     }
 
     &__arrow-next {
-
+        @extend .slider-2__arrow-back;
+        margin-right: 40px;
     }
 }

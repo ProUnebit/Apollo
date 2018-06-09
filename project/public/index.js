@@ -50,8 +50,14 @@ sliderArrowBack_1.addEventListener('click', sliderOptions_1.backSlide);
 sliderArrowNext_1.addEventListener('click', sliderOptions_1.nextSlide);
 
 // Slider-2
-// obj options
-let sliderOptions_2 = {};
+// init 'Slick.js' slider
+$(document).ready(function(){
+  $('.slider-2__roundabout').slick({
+      slidesToShow: 3,
+      focusOnSelect: true,
+      dots: true
+  })
+});
 
 // Messenger
 function blurInput(e) {
