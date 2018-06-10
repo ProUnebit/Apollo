@@ -50,14 +50,14 @@ sliderArrowBack_1.addEventListener('click', sliderOptions_1.backSlide);
 sliderArrowNext_1.addEventListener('click', sliderOptions_1.nextSlide);
 
 // Slider-2
-// init 'Slick.js' slider
+// init 'Slick.js' slider (jQuery)
 $(document).ready(function(){
   $('.slider-2__roundabout').slick({
       slidesToShow: 3,
       focusOnSelect: true,
       dots: true,
       adaptiveHeight: true,
-      speed: 800
+      speed: 900
   })
 });
 
