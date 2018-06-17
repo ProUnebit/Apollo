@@ -4,6 +4,10 @@ const menuCloseBtn = document.querySelector('.header__menu-close');
 const menuSectionsList = document.querySelector('.header__menu-sections-list');
 const sliderArrowBack_1 = document.querySelector('.slider-1__arrow-back');
 const sliderArrowNext_1 = document.querySelector('.slider-1__arrow-next');
+const inputMail = document.getElementById('input-email');
+const inputSubject = document.getElementById('input-subject');
+const textareaMessage = document.getElementById('textarea-message');
+const submitMessage = document.querySelector('.messenger__submit');
 
 // B L O C K S
 // Header
@@ -62,6 +66,7 @@ $(document).ready(function(){
 });
 
 // Messenger
+// input auto value
 function blurInput(e) {
     this.value = (this.value == '') ? this.title : this.value;
 };
@@ -69,6 +74,56 @@ function blurInput(e) {
 function focusInput(e) {
     this.value = (this.value == this.title) ? '' : this.value;
 };
+
+for (elem of document.forms[0].elements) {
+    if (elem.tagName == 'INPUT') {
+        elem.addEventListener('blur', blurInput);
+        elem.addEventListener('focus', focusInput);
+    }
+}
+// validation form
+// regular expression for #input-email (check), example: test@test.com
+let regExForMail = /\S+@\S+\.\S+/;
+// check #input-email & #input-subject
+function checkInput() {
+    if (inputSubject.value.trim() !== ''
+    &&
+    inputSubject.value !== inputSubject.title
+    &&
+    textareaMessage.value.trim() !== ''
+    &&
+    regExForMail.test(inputMail.value)) {
+        submitMessage.style.backgroundColor = '#66CC66';
+        submitMessage.style.cursor = 'pointer';
+        submitMessage.disabled = false;
+    } else {
+        submitMessage.style.backgroundColor = '';
+        submitMessage.style.cursor = 'not-allowed';
+        submitMessage.disabled = true;
+    }
+}
+// submitted data and preventDefault method for form, reload page -> to appoint default value
+document.forms[0].addEventListener('submit', e => {
+    e.preventDefault();
+
+    if (inputSubject.value == inputSubject.title
+        &&
+        inputMail.value == inputMail.title
+        &&
+        textareaMessage.value == textareaMessage.placeholder) {
+            return;
+        }
+// message value
+    console.info('Message value: ' + textareaMessage.value);
+// reload page
+    setTimeout( () => { location.reload(); }, 2500);
+    inputSubject.value = inputSubject.title;
+    inputMail.value = inputMail.title;
+    textareaMessage.value = textareaMessage.placeholder;
+});
+
+// Scrolling to sections
+
 
 // Onload
 // auto load first slide for "sliderOne"

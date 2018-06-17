@@ -105,6 +105,7 @@ $button-text-color: $global-white;
         background-color: $button-bg;
         border: none;
         cursor: not-allowed;
+        transition: .115s ease;
         grid-column: 1 / 3;
         grid-row: 3 / 4;
         &::-moz-focus-inner {
@@ -112,7 +113,7 @@ $button-text-color: $global-white;
         }
         &:active {
             padding: 0;
-            background-color: lighten($button-bg, 20%);
+            transform: scale(1.02);
         }
         &:focus {
             outline: none;
