@@ -130,21 +130,24 @@ $text-color: $global-black;
     }
 
     &__menu-item {
-        height: 55px;
-        font-family: 'o';
-        font-weight: bold;
-        color: lighten($text-color, 30%);
-        text-align: center;
-        line-height: 55px;
-        font-size: 17px;
         cursor: pointer;
-        transition: .125s linear;
-        &:hover {
-            background-color: darken($main-bg, 8%);
-            color: $global-white;
-        }
         &:last-child {
             margin-bottom: 0;
+        }
+        & > a {
+            display: block;
+            height: 55px;
+            font-family: 'o';
+            font-weight: bold;
+            color: lighten($text-color, 30%);
+            text-align: center;
+            line-height: 55px;
+            font-size: 17px;
+            transition: .125s linear;
+            &:hover {
+                background-color: darken($main-bg, 8%);
+                color: $global-white;
+            }
         }
     }
 }

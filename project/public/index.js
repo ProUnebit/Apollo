@@ -2,6 +2,7 @@
 const menuOpenBtn = document.querySelector('.header__menu-open');
 const menuCloseBtn = document.querySelector('.header__menu-close');
 const menuSectionsList = document.querySelector('.header__menu-sections-list');
+const menuSectionsItems = document.querySelectorAll('.header__menu-item');
 const sliderArrowBack_1 = document.querySelector('.slider-1__arrow-back');
 const sliderArrowNext_1 = document.querySelector('.slider-1__arrow-next');
 const inputMail = document.getElementById('input-email');
@@ -114,7 +115,7 @@ document.forms[0].addEventListener('submit', e => {
             return;
         }
 // message value
-    console.info('Message value: ' + textareaMessage.value);
+    console.info('Message: ' + textareaMessage.value);
 // reload page
     setTimeout( () => { location.reload(); }, 2500);
     inputSubject.value = inputSubject.title;
@@ -123,7 +124,30 @@ document.forms[0].addEventListener('submit', e => {
 });
 
 // Scrolling to sections
-
+function ScrollTo(e) {
+    e.preventDefault();
+    const speed = 0.45;
+    let w = window.pageYOffset;
+    let hash = this.href.replace(/[^#]*(.*)/, '$1');
+    let t = document.querySelector(hash).getBoundingClientRect().top;
+    let start = null;
+    requestAnimationFrame(step);
+    function step(time) {
+        if (start === null) start = time;
+        let progress = time - start;
+        let r = (t < 0 ? Math.max(w - progress / speed, w + t) : Math.min(w + progress / speed, w + t));
+        window.scrollTo(0, r);
+        if (r !== w + t) {
+            requestAnimationFrame(step);
+        } else {
+            location.hash = hash;
+        }
+    }
+}
+// listeners
+for (let i = 0; i < menuSectionsItems.length; i++) {
+    document.querySelector(`[href^="#section-${i+2}"]`).onclick = ScrollTo;
+}
 
 // Onload
 // auto load first slide for "sliderOne"
