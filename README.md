@@ -2,7 +2,7 @@
 **Project name:** *Apollo*
 
 ![Project Type](https://preview.ibb.co/bsF6cy/pic_demo_Js.png)
-<sub>demo code</sub>
+```demo code```
 - - -
 ## Folders
 ### stuff
@@ -10,7 +10,7 @@ Web-Layout view (.psd)
 ### project
 It's a project dir.
 
-Do it:s
+Do it:
 ```
 npm install
 gulp server
