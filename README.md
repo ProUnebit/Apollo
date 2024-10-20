@@ -3,7 +3,7 @@
 
 **Links:** 
 
-[https://apollo18.netlify.com](https://apollo18.netlify.com)
+[https://apollo18.netlify.com](https://apollo18.netlify.app)
 
 [https://prounebit.github.io/apollo/index.html](https://prounebit.github.io/apollo/index.html)
 
